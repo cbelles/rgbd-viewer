@@ -116,6 +116,11 @@ void RawImagesWindow::on_action_Filters_toggled(bool active)
   m_controller.toggleFilters(active);
 }
 
+void RawImagesWindow::on_actionCamera_Settings_toggled(bool active)
+{
+  m_controller.toggleCameraSettings(active);
+}
+
 void RawImagesWindow::on_actionCalibration_triggered(bool active)
 {
     m_controller.toggleCalibration(active);

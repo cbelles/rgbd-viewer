@@ -56,6 +56,7 @@ private slots:
     void on_action_GrabFrames_toggled(bool );
     void on_action_Screen_capture_mode_toggled(bool );
     void on_action_Filters_toggled(bool );
+	void on_actionCamera_Settings_toggled(bool );
     void on_action_3D_View_toggled(bool );
     void on_action_Show_Object_Detector_toggled(bool );
     void on_actionCalibration_triggered(bool );

@@ -5,6 +5,7 @@ QT4_WRAP_CPP(moc_sources
   FiltersWindow.h
   RawImagesWindow.h
   CalibrationWindow.h
+  CameraSettingsWindow.h
 )
 
 QT4_WRAP_UI(uic_sources
@@ -13,6 +14,7 @@ QT4_WRAP_UI(uic_sources
   FiltersWindow.ui
   DetectorWindow.ui
   CalibrationWindow.ui
+  CameraSettingsWindow.ui
 )
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
@@ -26,6 +28,7 @@ SET(viewer_sources ${moc_sources} ${uic_sources}
                DetectorWindow.cpp DetectorWindow.h
                RawImagesWindow.cpp RawImagesWindow.h
                CalibrationWindow.cpp CalibrationWindow.h
+			   CameraSettingsWindow.cpp CameraSettingsWindow.h
 )
 
 NESTK_ADD_EXECUTABLE(rgbd-viewer ${viewer_sources})
