@@ -34,6 +34,7 @@ class QMainWindow;
 class RawImagesWindow;
 class View3DWindow;
 class FiltersWindow;
+class CameraSettingsWindow;
 class DetectorWindow;
 class CalibrationWindow;
 class Pa10ControllerWindow;
@@ -83,6 +84,7 @@ public:
   void toggleView3d(bool );
   void toggleObjectDetector(bool );
   void toggleFilters(bool );
+  void toggleCameraSettings(bool );
   void toggleCalibration(bool );
   void setScreenCaptureMode(bool active) { m_screen_capture_mode = active; }
   void setGrabFrames(bool active) { m_grab_frames = active; }
@@ -102,6 +104,7 @@ protected:
   DetectorWindow* m_detector_window;
   View3DWindow* m_view3d_window;
   FiltersWindow* m_filters_window;
+  CameraSettingsWindow* m_camerasettings_window;
   CalibrationWindow* m_calibration_window;
   ntk::RGBDFrameRecorder* m_frame_recorder;
   ObjectDetector* m_object_detector;

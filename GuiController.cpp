@@ -25,6 +25,7 @@
 #include "ObjectDetector.h"
 #include "View3dWindow.h"
 #include "FiltersWindow.h"
+#include "CameraSettingsWindow.h"
 #include "DetectorWindow.h"
 #include "RawImagesWindow.h"
 #include "CalibrationWindow.h"
@@ -61,6 +62,7 @@ GuiController :: GuiController(ntk::RGBDGrabber& producer,
     m_raw_images_window = new RawImagesWindow(*this);
     m_view3d_window = new View3DWindow(*this);
     m_filters_window = new FiltersWindow(*this);
+	m_camerasettings_window = new CameraSettingsWindow(*this);
     m_detector_window = new DetectorWindow(*this);
     m_calibration_window = new CalibrationWindow(*this);
 
@@ -256,6 +258,18 @@ void GuiController::toggleFilters(bool active)
     else
     {
         m_filters_window->hide();
+    }
+}
+
+void GuiController::toggleCameraSettings(bool active)
+{
+    if (active)
+    {
+        m_camerasettings_window->show();
+    }
+    else
+    {
+        m_camerasettings_window->hide();
     }
 }
 
